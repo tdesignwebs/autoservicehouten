@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Preahvihear&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+body {
+    background: linear-gradient(#030405, #212426);
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+}
+
+.landing-page-main-container {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+
+
+/* For phones (max-width 360px) */
+@media (max-width: 400px) {
+    .navbar {
+        width: 95%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar-logo-box {
+        width: 33%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        text-align: center;
+    }
+
+    .navbar-pages-text-box {
+        width: 33%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        text-align: center;
+    }
+
+    .navbar-afspraak-btn {
+        background: #0059FF;
+        border-radius: 10px;
+        border: none;
+        width: 90%;
+        color: white;
+        height: 60px;
+        font-size: 15px;
+        font-family: "Rubik", sans-serif;
+        font-weight: 500;
+    }
+
+    .hamburger-menu {
+        position: relative;
+    }
+
+    .hamburger-icon {
+        width: 50px;
+        height: 25px;
+        margin: 0 10px 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        align-items: flex-end;
+    }
+
+    .bar-1 {
+        height: 4px;
+        background-color: white;
+        border-radius: 2px;
+        width: 40px;
+    }
+
+    .bar-2 {
+        height: 4px;
+        background-color: white;
+        border-radius: 2px;
+        width: 30px;
+    }
+
+    .bar-3 {
+        height: 4px;
+        background-color: white;
+        border-radius: 2px;
+        width: 20px;
+    }
+
+    .hamburger-dropdown {
+        display: none;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        background-color: rgb(255, 255, 255);
+        width: 250px;
+        border-radius: 5px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .hamburger-dropdown.show {
+        display: block;
+    }
+
+    .hamburger-dropdown ul {
+        list-style-type: none;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .hamburger-dropdown li {
+        margin: 10px 0;
+    }
+
+    .hamburger-dropdown a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        font-family: "Rubik", sans-serif;
+        font-weight: 500;
+        padding: 5px 0;
+        display: block;
+        text-align: center;
+    }
+
+    .welcome-text-box {
+        width: 100%;
+        height: 310px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h1 {
+        color: white;
+        text-align: center;
+        font-size: 26px;
+        font-family: "Rubik", sans-serif;
+        font-weight: 500;
+    }
+
+    .product-main-box {
+        position: relative;
+        display: flex;
+        background-color: white;
+        width: 100%;
+        gap: 30px;
+        padding-bottom: 100px;
+        min-height: 1000px;
+        height: fit-content;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+
+    .bmw-red-box {
+        width: 100%;
+        position: absolute;
+        top: -120px;
+    }
+    .bmw-wit-box {
+        width: 100%;
+        position: absolute;
+        top: -100px;
+    }
+
+    img {
+        background-size: contain;
+    }
+
+    .bmw-rood-1 {
+        width: 100%;
+    }
+
+    .boek-je-afspraak-box {
+        width: 100%;
+        margin-top: 50px;
+        height: fit-content;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .boek-je-afspraak-h1 {
+        color: black;
+        font-size: 25px;
+    }
+
+
+
+    .product-box-outside {
+        width: 300px;
+        height: 423px;
+        background-color: #FFFFFF;
+        box-shadow: 0px 2px 27.5px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .img-box{
+        width: 300px;
+        height: 229px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .img-product{
+        width: 300px;
+        z-index: 1;
+        height: 300px;
+    }
+    .down-side-product-box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        height: 195px;
+    }
+
+
+    .product-name-box{
+        background-color: white;
+        position: absolute;
+        width: 200px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 195px;
+        border-radius: 10px 10px 0 0;
+        z-index: 2;
+    }
+    .product-name-h1{
+        font-size: 16px;
+        margin: 0;
+        color: black;
+    }
+    .down-side-button{
+        background: #0059FF;
+        border-radius: 10px;
+        border: none;
+        width: 274px;
+        color: white;
+        height: 40px;
+        font-size: 15px;
+        font-family: "Rubik", sans-serif;
+        font-weight: 500;
+    }
+
+    .information-product-h1{
+        font-size: 13px;
+        font-weight: normal;
+        color: black;
+        margin: 0;
+        height: 111px;
+        text-align: left;
+        width: 254px;
+    }
+    .product-layout{
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    .werkzaamheden-main-box-page{
+        background-color: #030405;
+        width: 100%;
+        height: fit-content;
+        padding-bottom: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        color: white;
+        position: relative;
+        flex-direction: column;
+    }
+    .werkzaamheden-box-h1{
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        align-items: center;
+        justify-content: center;
+    }
+    .werkzaamheden-h1{
+        color: white;
+        font-size: 30px;
+        
+    }
+    .werkzaamheden-product-h1{
+        font-size: 13px;
+        font-weight: normal;
+        color: rgb(255, 255, 255);
+        margin: 0;
+        height: 111px;
+        width: 300px;
+    }
+    .werkzaamheden-h1-black{
+        color: rgb(0, 0, 0);
+        margin: 0;
+        font-size: 30px;
+        
+    }
+    .werkzaamheden-product-h1-black{
+        font-size: 13px;
+        font-weight: normal;
+        color: rgb(0, 0, 0);
+        margin: 0;
+        text-align: left;
+        width: 260px;
+    }
+    .werkzaamheden-information-main-box{
+        width: 300px;
+        height: 450px;
+        background-color: white;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .werkzaamheden-information-img-box{
+        width: 100%;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .img-werkzaamheden{
+        width: 300px;
+        z-index: 1;
+        height: 300px; 
+    }
+    .werkzaamheden-information-text-box{
+        width: 100%;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .werkzaamheden-name-box{
+        width: 100%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .werkzaamheden-button-box{
+        width: 100%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .werkzaamheden-info-box{
+        width: 100%;
+        height: 110px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .werkzaamheden-layout{
+        width: 100%;
+        height: fit-content;
+        gap: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* For tablets (max-width 768px) */
+@media (max-width: 768px) {}
+
+/* For laptops (max-width 1440px) */
+@media (max-width: 1440px) {}
+
+/* For desktops (max-width 1920px) */
+@media (max-width: 1920px) {}
