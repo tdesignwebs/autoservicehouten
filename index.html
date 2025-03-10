@@ -13,7 +13,6 @@
 <body>
     <div class="landing-page-main-container">
 
-
         <div class="navbar">
             <div class="navbar-logo-box">
                 <svg width="65" height="50" viewBox="0 0 65 87" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -27,9 +26,7 @@
                         d="M38.8977 77C38.6043 77 38.3643 76.9067 38.1777 76.72C37.991 76.5333 37.8977 76.2933 37.8977 76V50C37.8977 49.7067 37.991 49.4667 38.1777 49.28C38.3643 49.0933 38.6043 49 38.8977 49H44.0577C44.351 49 44.591 49.0933 44.7777 49.28C44.9643 49.4667 45.0577 49.7067 45.0577 50V59.64H54.9377V50C54.9377 49.7067 55.031 49.4667 55.2177 49.28C55.4043 49.0933 55.6443 49 55.9377 49H61.0977C61.391 49 61.631 49.0933 61.8177 49.28C62.0043 49.4667 62.0977 49.7067 62.0977 50V76C62.0977 76.2933 62.0043 76.5333 61.8177 76.72C61.631 76.9067 61.391 77 61.0977 77H55.9377C55.6443 77 55.4043 76.9067 55.2177 76.72C55.031 76.5333 54.9377 76.2933 54.9377 76V66.04H45.0577V76C45.0577 76.2933 44.9643 76.5333 44.7777 76.72C44.591 76.9067 44.351 77 44.0577 77H38.8977Z"
                         fill="white" />
                 </svg>
-
             </div>
-
             <div class="navbar-pages-text-box">
                 <div class="hamburger-menu">
                     <div class="hamburger-icon" onclick="toggleMenu()">
@@ -40,15 +37,33 @@
                     <div class="hamburger-dropdown">
                         <ul>
                             <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Over ons</a></li>
+                            <li><a href="#">Onderhoud</a></li>
+                            <li><a href="#">Occasions</a></li>
+                            <li><a href="#">Inruil & Inkoop</a></li>
                             <li><a href="#">Contact</a></li>
                         </ul>
+                        <div class="contact-info">
+                            <a class="call-me-box" href="tel:+31624987172">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                    fill="#ffff">
+                                    <path
+                                        d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z" />
+                                </svg>
+                            </a>
+                            <a class="call-me-box" href="mailto:mehmet.babacanoglu@gmail.com">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                    fill="#ffff">
+                                    <path
+                                        d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
+      
 
 
         <div class="welcome-text-box">
@@ -63,10 +78,10 @@
 
             <div class="boek-je-afspraak-box">
                 <h1 class="boek-je-afspraak-h1">
-                    Boek je afspraak hier.
+                    maak je afspraak met 
                 </h1>
-                <button class="navbar-afspraak-btn">
-                    Afspraak
+                <button class="navbar-afspraak-btn" onclick="scrollToFooter()">
+                    bellen of mailen
                 </button>
             </div>
 
@@ -81,9 +96,7 @@
                     </div>
                     <div class="down-side-product-box">
                         <h1 class="information-product-h1">
-                            Bij ons kunt u terecht voor het onderhoud van uw auto én reparaties. Ons kennisgebied op
-                            auto’s is zeer uitgebreid en graag helpen we u verder waar u ons maar nodig heeft. Wij zijn
-                            niet beperkt in een bepaald automerk en hebben ervaring met de meest uiteenlopende merken.
+                            Voor auto-onderhoud en reparaties bent u bij ons aan het juiste adres. We hebben brede kennis van diverse automerken en helpen u graag verder!
                         </h1>
                         <button class="down-side-button">Bekijken</button>
                     </div>
@@ -98,9 +111,7 @@
                     </div>
                     <div class="down-side-product-box">
                         <h1 class="information-product-h1">
-                            Autobanden in ieder segment. Bent u nou op zoek naar een goedkope set banden of een type
-                            band uit het A-segment, bij ons kunt u iedere band krijgen die u wenst. Vraag vrijblijvend
-                            een gratis offerte aan en wij zullen u ons scherpste aanbod doen.
+                            Autobanden voor elk segment! Of u nu zoekt naar een voordelige set of premium A-segment banden, wij hebben wat u nodig heeft. Vraag vrijblijvend een gratis offerte aan voor ons beste aanbod!
                         </h1>
                         <button class="down-side-button">Bekijken</button>
                     </div>
@@ -115,9 +126,7 @@
                     </div>
                     <div class="down-side-product-box">
                         <h1 class="information-product-h1">
-                            Algemene periodieke keurig is een in Europa wettelijke verplichte keuring ter bevordering
-                            van de verkeersveiligheid en ter bescherming van het milieu. Bij de APK controleren wij het
-                            volledige voertuig. Op basis van deze controle maken wij voor u een nieuw APK rapport.
+                            De Algemene Periodieke Keuring (APK) is een wettelijk verplichte keuring in Europa om de verkeersveiligheid te waarborgen en het milieu te beschermen. Wij voeren een volledige controle van uw voertuig uit en stellen een nieuw APK-rapport voor u op.
                         </h1>
                         <button class="down-side-button">Bekijken</button>
                     </div>
@@ -148,8 +157,7 @@
                     </div>
                     <div class="down-side-product-box">
                         <h1 class="information-product-h1">
-                            Bekijk hier ons aanbod van gebruikte auto`s. Heeft u vragen? Neem dan gerust contact met ons
-                            op.
+                            Op zoek naar een betrouwbare, gebruikte auto? Ontdek ons gevarieerde aanbod aan occasions, zorgvuldig geselecteerd en in topconditie. Heeft u vragen of wilt u een proefrit maken? Neem gerust contact met ons op – we helpen u graag verder!🚗
                         </h1>
                         <button class="down-side-button">Bekijken</button>
                     </div>
@@ -228,11 +236,14 @@
 
 
         </div>
-        <div class="footer-main-box">
+        <div class="footer-main-box" id="footer">
 
             <div class="contact-box">
                 <div class="contact-name">
                     <h1 class="contact-h1">Contact</h1>
+                    <h1 class="location-info-h2">bel of mail voor afspraak</h1>
+               
+                   
                 </div>
                 <div class="contact-info">
                     <a class="call-me-box" href="tel:+31624987172">
@@ -267,9 +278,7 @@
                 </div>
                 <div class="location-down-box">
                     <h1 class="location-info-h1">alleen met afspraak</h1>
-                    <button class="locatie-btn">
-                        Maken
-                    </button>
+                   
                 </div>
             </div>
 
@@ -286,6 +295,8 @@
 
     </div>
 </body>
+
+
 <script>
     function toggleMenu() {
         let menu = document.querySelector(".hamburger-dropdown");
@@ -294,6 +305,43 @@
         icon.classList.toggle("active");
     }
 
+    // Close menu when clicking outside
+    document.addEventListener("click", function(event) {
+        let menu = document.querySelector(".hamburger-dropdown");
+        let icon = document.querySelector(".hamburger-icon");
+        if (!event.target.closest(".hamburger-menu")) {
+            menu.classList.remove("show");
+            icon.classList.remove("active");
+        }
+    });
+
+    // Custom smooth scroll function
+    function scrollToFooter() {
+        const footer = document.getElementById("footer");
+        const startPosition = window.pageYOffset; // Current scroll position
+        const targetPosition = footer.offsetTop; // Target scroll position
+        const distance = targetPosition - startPosition; // Distance to scroll
+        const duration = 800; // Duration of the scroll in milliseconds
+        let startTime = null;
+
+        function animation(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            const timeElapsed = currentTime - startTime;
+            const run = ease(timeElapsed, startPosition, distance, duration);
+            window.scrollTo(0, run);
+            if (timeElapsed < duration) requestAnimationFrame(animation);
+        }
+
+        // Easing function for smooth scrolling
+        function ease(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t + b;
+            t--;
+            return -c / 2 * (t * (t - 2) - 1) + b;
+        }
+
+        requestAnimationFrame(animation);
+    }
 </script>
 
 </html>
