@@ -63,6 +63,17 @@ body {
         font-family: "Rubik", sans-serif;
         font-weight: 500;
     }
+    .locatie-btn {
+        background: #0059FF;
+        border-radius: 10px;
+        border: none;
+        width: 150px;
+        color: white;
+        height: 40px;
+        font-size: 15px;
+        font-family: "Rubik", sans-serif;
+        font-weight: 500;
+    }
 
     .hamburger-menu {
         position: relative;
@@ -171,6 +182,7 @@ body {
         position: absolute;
         top: -120px;
     }
+
     .bmw-wit-box {
         width: 100%;
         position: absolute;
@@ -216,7 +228,8 @@ body {
         flex-direction: column;
         overflow: hidden;
     }
-    .img-box{
+
+    .img-box {
         width: 300px;
         height: 229px;
         overflow: hidden;
@@ -224,12 +237,14 @@ body {
         align-items: center;
         justify-content: center;
     }
-    .img-product{
+
+    .img-product {
         width: 300px;
         z-index: 1;
         height: 300px;
     }
-    .down-side-product-box{
+
+    .down-side-product-box {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -240,7 +255,7 @@ body {
     }
 
 
-    .product-name-box{
+    .product-name-box {
         background-color: white;
         position: absolute;
         width: 200px;
@@ -252,12 +267,14 @@ body {
         border-radius: 10px 10px 0 0;
         z-index: 2;
     }
-    .product-name-h1{
+
+    .product-name-h1 {
         font-size: 16px;
         margin: 0;
         color: black;
     }
-    .down-side-button{
+
+    .down-side-button {
         background: #0059FF;
         border-radius: 10px;
         border: none;
@@ -269,7 +286,7 @@ body {
         font-weight: 500;
     }
 
-    .information-product-h1{
+    .information-product-h1 {
         font-size: 13px;
         font-weight: normal;
         color: black;
@@ -278,7 +295,8 @@ body {
         text-align: left;
         width: 254px;
     }
-    .product-layout{
+
+    .product-layout {
         width: 100%;
         flex-wrap: wrap;
         gap: 20px;
@@ -287,7 +305,7 @@ body {
         display: flex;
     }
 
-    .werkzaamheden-main-box-page{
+    .werkzaamheden-main-box-page {
         background-color: #030405;
         width: 100%;
         height: fit-content;
@@ -299,7 +317,8 @@ body {
         position: relative;
         flex-direction: column;
     }
-    .werkzaamheden-box-h1{
+
+    .werkzaamheden-box-h1 {
         width: 100%;
         height: 200px;
         display: flex;
@@ -308,12 +327,14 @@ body {
         align-items: center;
         justify-content: center;
     }
-    .werkzaamheden-h1{
+
+    .werkzaamheden-h1 {
         color: white;
         font-size: 30px;
-        
+
     }
-    .werkzaamheden-product-h1{
+
+    .werkzaamheden-product-h1 {
         font-size: 13px;
         font-weight: normal;
         color: rgb(255, 255, 255);
@@ -321,13 +342,15 @@ body {
         height: 111px;
         width: 300px;
     }
-    .werkzaamheden-h1-black{
+
+    .werkzaamheden-h1-black {
         color: rgb(0, 0, 0);
         margin: 0;
         font-size: 30px;
-        
+
     }
-    .werkzaamheden-product-h1-black{
+
+    .werkzaamheden-product-h1-black {
         font-size: 13px;
         font-weight: normal;
         color: rgb(0, 0, 0);
@@ -335,7 +358,8 @@ body {
         text-align: left;
         width: 260px;
     }
-    .werkzaamheden-information-main-box{
+
+    .werkzaamheden-information-main-box {
         width: 300px;
         height: 450px;
         background-color: white;
@@ -346,7 +370,8 @@ body {
         justify-content: flex-start;
         flex-direction: column;
     }
-    .werkzaamheden-information-img-box{
+
+    .werkzaamheden-information-img-box {
         width: 100%;
         height: 200px;
         display: flex;
@@ -354,12 +379,14 @@ body {
         justify-content: center;
         overflow: hidden;
     }
-    .img-werkzaamheden{
+
+    .img-werkzaamheden {
         width: 300px;
         z-index: 1;
-        height: 300px; 
+        height: 300px;
     }
-    .werkzaamheden-information-text-box{
+
+    .werkzaamheden-information-text-box {
         width: 100%;
         height: 250px;
         display: flex;
@@ -367,28 +394,32 @@ body {
         align-items: center;
         justify-content: space-between;
     }
-    .werkzaamheden-name-box{
+
+    .werkzaamheden-name-box {
         width: 100%;
         height: 70px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    .werkzaamheden-button-box{
+
+    .werkzaamheden-button-box {
         width: 100%;
         height: 70px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    .werkzaamheden-info-box{
+
+    .werkzaamheden-info-box {
         width: 100%;
         height: 110px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    .werkzaamheden-layout{
+
+    .werkzaamheden-layout {
         width: 100%;
         height: fit-content;
         gap: 20px;
@@ -396,6 +427,100 @@ body {
         align-items: center;
         justify-content: center;
         flex-direction: column;
+    }
+
+    .footer-main-box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 50px;
+        flex-direction: column;
+        width: 100%;
+        height: fit-content;
+        gap: 10px;
+        background-color: white;
+    }
+    .contact-box{
+        width: 300px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+    .contact-h1{
+        color: black;
+    }
+    .contact-info{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 20px;
+    }
+    .call-me-box{
+        width: 50px;
+        height: 50px;
+        background-color: #0059FF;
+        border-radius: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    a{
+        font-size: 13px;
+        font-weight: normal;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+
+    .locatie-box{
+        width: 300px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .locatie-box-name{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+    }
+    .location-down-box{
+        width: 100%;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .location-info-h1{
+        color: black;
+        margin: 0;
+        font-size: 13px;
+        text-align: left;
+        font-weight: normal;
+    }
+    .google-maps-box{
+        width: 300px;
+        height: 300px;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0px 2px 27.5px rgba(0, 0, 0, 0.05);
+    }
+    .google-maps-main{
+        width: 300px;
+        height: 300px;
+    }
+    .openingstijden-box{
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: fit-content;
     }
 }
 
