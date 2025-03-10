@@ -26,44 +26,47 @@ body {
 
 /* For phones (max-width 360px) */
 @media (max-width: 400px) {
+
+    /* Navbar Styling */
     .navbar {
-        width: 95%;
-        height: 60px;
+        width: 100%;
+        height: 70px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding: 0 20px;
+        background-color: rgb(3, 4, 5);
+        /* Semi-transparent dark background */
+        backdrop-filter: blur(10px);
+        /* Blur effect for modern look */
+        /* Subtle border */
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        /* Soft shadow */
     }
 
     .navbar-logo-box {
-        width: 33%;
-        height: 60px;
         display: flex;
         align-items: center;
         justify-content: start;
-        text-align: center;
+    }
+
+    .navbar-logo-box svg {
+        width: 65px;
+        height: 50px;
+        fill: white;
+        /* Ensure the logo is white */
     }
 
     .navbar-pages-text-box {
-        width: 33%;
-        height: 60px;
         display: flex;
         align-items: center;
         justify-content: end;
-        text-align: center;
     }
 
     .navbar-afspraak-btn {
-        background: #0059FF;
-        border-radius: 10px;
-        border: none;
-        width: 90%;
-        color: white;
-        height: 60px;
-        font-size: 15px;
-        font-family: "Rubik", sans-serif;
-        font-weight: 500;
-    }
-    .locatie-btn {
         background: #0059FF;
         border-radius: 10px;
         border: none;
@@ -73,78 +76,149 @@ body {
         font-size: 15px;
         font-family: "Rubik", sans-serif;
         font-weight: 500;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.2s ease;
     }
 
+    .navbar-afspraak-btn:hover {
+        background: #0059ffe6;
+        /* Darker shade on hover */
+        transform: scale(1.05);
+        /* Slight scale effect */
+    }
+
+    /* Hamburger Menu Styling */
     .hamburger-menu {
         position: relative;
+        display: flex;
+        margin-right: 10px;
+        align-items: center;
+        justify-content: end;
     }
 
     .hamburger-icon {
-        width: 50px;
-        height: 25px;
-        margin: 0 10px 0 0;
+        width: 40px;
+        height: 30px;
         display: flex;
         flex-direction: column;
+        align-items: flex-end;
         justify-content: space-between;
         cursor: pointer;
-        align-items: flex-end;
+        transition: transform 0.3s ease;
     }
 
-    .bar-1 {
-        height: 4px;
-        background-color: white;
-        border-radius: 2px;
-        width: 40px;
+    .hamburger-icon.active {
+        transform: rotate(90deg);
+        /* Rotate icon when menu is open */
     }
 
-    .bar-2 {
-        height: 4px;
-        background-color: white;
-        border-radius: 2px;
-        width: 30px;
-    }
-
+    .bar-1,
+    .bar-2,
     .bar-3 {
         height: 4px;
         background-color: white;
         border-radius: 2px;
-        width: 20px;
+        transition: all 0.3s ease;
     }
 
+    .bar-1 {
+        width: 100%;
+    }
+
+    .bar-2 {
+        width: 80%;
+    }
+
+    .bar-3 {
+        width: 60%;
+    }
+
+    .hamburger-icon.active .bar-1 {
+        transform: translateY(12px) rotate(45deg);
+        /* Transform to 'X' */
+        width: 100%;
+    }
+
+    .hamburger-icon.active .bar-2 {
+        opacity: 0;
+        /* Hide middle bar */
+    }
+
+    .hamburger-icon.active .bar-3 {
+        transform: translateY(-12px) rotate(-45deg);
+        /* Transform to 'X' */
+        width: 100%;
+    }
+
+    /* Full-Screen Dropdown Menu */
     .hamburger-dropdown {
         display: none;
-        position: absolute;
-        top: 40px;
+        position: fixed;
+        top: 70px;
+        /* Height of the navbar */
+        left: 0;
         right: 0;
-        background-color: rgb(255, 255, 255);
-        width: 250px;
-        border-radius: 5px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 1);
+        /* Semi-transparent dark background */
+        z-index: 999;
+        overflow-y: auto;
+        /* Allow scrolling if content is too long */
+        animation: slideDown 0.5s ease;
+        /* Smooth slide-down animation */
     }
 
     .hamburger-dropdown.show {
-        display: block;
+        display: flex;
+        padding-bottom: 30px;
+        justify-content: space-between;
+        flex-direction: column;
     }
 
     .hamburger-dropdown ul {
         list-style-type: none;
-        padding: 10px;
+        padding: 20px;
         margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
     }
 
     .hamburger-dropdown li {
-        margin: 10px 0;
+        margin: 0;
     }
 
     .hamburger-dropdown a {
         text-decoration: none;
-        color: rgb(0, 0, 0);
-        font-size: 16px;
+        color: white;
+        font-size: 20px;
         font-family: "Rubik", sans-serif;
-        font-weight: 500;
-        padding: 5px 0;
-        display: block;
+        font-weight: bold;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
+        transition: background 0.3s ease, color 0.3s ease;
+        border-radius: 10000px;
+    }
+
+    .hamburger-dropdown a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        /* Light hover effect */
+    }
+
+    /* Animation for Dropdown */
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     .welcome-text-box {
@@ -278,12 +352,16 @@ body {
         background: #0059FF;
         border-radius: 10px;
         border: none;
+        cursor: pointer;
         width: 274px;
         color: white;
         height: 40px;
         font-size: 15px;
         font-family: "Rubik", sans-serif;
         font-weight: 500;
+    }
+    .down-side-button:hover{
+        background-color: #0059ffd9;
     }
 
     .information-product-h1 {
@@ -429,7 +507,7 @@ body {
         flex-direction: column;
     }
 
-    .footer-main-box{
+    .footer-main-box {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -440,7 +518,8 @@ body {
         gap: 10px;
         background-color: white;
     }
-    .contact-box{
+
+    .contact-box {
         width: 300px;
         height: 150px;
         display: flex;
@@ -449,17 +528,21 @@ body {
         flex-direction: column;
 
     }
-    .contact-h1{
+
+    .contact-h1 {
         color: black;
+        margin: 0;
     }
-    .contact-info{
+
+    .contact-info {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
         gap: 20px;
     }
-    .call-me-box{
+
+    .call-me-box {
         width: 50px;
         height: 50px;
         background-color: #0059FF;
@@ -468,14 +551,15 @@ body {
         align-items: center;
         justify-content: center;
     }
-    a{
+
+    a {
         font-size: 13px;
         font-weight: normal;
         color: rgb(0, 0, 0);
         text-decoration: none;
     }
 
-    .locatie-box{
+    .locatie-box {
         width: 300px;
         height: 100px;
         display: flex;
@@ -483,44 +567,70 @@ body {
         justify-content: center;
         flex-direction: column;
     }
-    .locatie-box-name{
+
+    .locatie-box-name {
         width: 100%;
         height: 50px;
         display: flex;
         align-items: center;
     }
-    .location-down-box{
+
+    .location-down-box {
         width: 100%;
-        height: 30px;
+        height: fit-content;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    .location-info-h1{
+
+    .location-info-h1 {
         color: black;
         margin: 0;
         font-size: 13px;
         text-align: left;
         font-weight: normal;
     }
-    .google-maps-box{
+
+    .google-maps-box {
         width: 300px;
         height: 300px;
         border-radius: 20px;
         overflow: hidden;
         box-shadow: 0px 2px 27.5px rgba(0, 0, 0, 0.05);
     }
-    .google-maps-main{
+
+    .google-maps-main {
         width: 300px;
         height: 300px;
     }
-    .openingstijden-box{
+
+    .openingstijden-box {
         width: 300px;
         display: flex;
         align-items: center;
+        margin-bottom: 20px;
         justify-content: center;
         flex-direction: column;
         height: fit-content;
+    }
+
+    .location-info-h2 {
+        font-size: 13px;
+        color: black;
+        font-weight: bolder;
+
+    }
+
+    .locatie-btn {
+        background: #0059FF;
+        border-radius: 10px;
+        border: none;
+        width: 150px;
+        color: white;
+        height: 40px;
+        font-size: 15px;
+        font-family: "Rubik", sans-serif;
+        font-weight: 500;
     }
 }
 
