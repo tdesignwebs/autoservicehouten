@@ -172,6 +172,9 @@ body {
         display: flex;
         padding-bottom: 30px;
         justify-content: space-between;
+        width: 100%;
+        background-color: black;
+    
         flex-direction: column;
     }
 
@@ -360,7 +363,8 @@ body {
         font-family: "Rubik", sans-serif;
         font-weight: 500;
     }
-    .down-side-button:hover{
+
+    .down-side-button:hover {
         background-color: #0059ffd9;
     }
 
