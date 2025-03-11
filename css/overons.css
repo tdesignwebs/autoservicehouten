@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Preahvihear&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+body {
+    background: linear-gradient(#030405, #212426);
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+}
+
+.landing-page-main-container {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+@media (max-width: 400px) {
+
+    /* Navbar Styling */
+    .navbar {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        background-color: rgb(3, 4, 5);
+        /* Semi-transparent dark background */
+        backdrop-filter: blur(10px);
+        /* Blur effect for modern look */
+        /* Subtle border */
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        /* Soft shadow */
+    }
+
+    .navbar-logo-box {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .navbar-logo-box svg {
+        width: 65px;
+        height: 50px;
+        fill: white;
+        /* Ensure the logo is white */
+    }
+
+    .navbar-pages-text-box {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+
+    .navbar-afspraak-btn {
+        background: #0059FF;
+        border-radius: 10px;
+        border: none;
+        width: 150px;
+        color: white;
+        height: 40px;
+        font-size: 15px;
+        font-family: "Rubik", sans-serif;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .navbar-afspraak-btn:hover {
+        background: #0059ffe6;
+        /* Darker shade on hover */
+        transform: scale(1.05);
+        /* Slight scale effect */
+    }
+
+    /* Hamburger Menu Styling */
+    .hamburger-menu {
+        position: relative;
+        display: flex;
+        margin-right: 10px;
+        align-items: center;
+        justify-content: end;
+    }
+
+    .hamburger-icon {
+        width: 40px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .hamburger-icon.active {
+        transform: rotate(90deg);
+        /* Rotate icon when menu is open */
+    }
+
+    .bar-1,
+    .bar-2,
+    .bar-3 {
+        height: 4px;
+        background-color: white;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    .bar-1 {
+        width: 100%;
+    }
+
+    .bar-2 {
+        width: 80%;
+    }
+
+    .bar-3 {
+        width: 60%;
+    }
+
+    .hamburger-icon.active .bar-1 {
+        transform: translateY(12px) rotate(45deg);
+        /* Transform to 'X' */
+        width: 100%;
+    }
+
+    .hamburger-icon.active .bar-2 {
+        opacity: 0;
+        /* Hide middle bar */
+    }
+
+    .hamburger-icon.active .bar-3 {
+        transform: translateY(-12px) rotate(-45deg);
+        /* Transform to 'X' */
+        width: 100%;
+    }
+
+    /* Full-Screen Dropdown Menu */
+    .hamburger-dropdown {
+        display: none;
+        position: fixed;
+        top: 70px;
+        /* Height of the navbar */
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 1);
+        /* Semi-transparent dark background */
+        z-index: 999;
+        overflow-y: auto;
+        /* Allow scrolling if content is too long */
+        animation: slideDown 0.5s ease;
+        /* Smooth slide-down animation */
+    }
+
+    .hamburger-dropdown.show {
+        display: flex;
+        padding-bottom: 30px;
+        justify-content: space-between;
+        width: 100%;
+        background-color: black;
+        z-index: 1000;
+        flex-direction: column;
+    }
+
+    .hamburger-dropdown ul {
+        list-style-type: none;
+        padding: 20px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .hamburger-dropdown li {
+        margin: 0;
+    }
+
+    .hamburger-dropdown a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        font-family: "Rubik", sans-serif;
+        font-weight: bold;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        transition: background 0.3s ease, color 0.3s ease;
+        border-radius: 10000px;
+    }
+
+    .hamburger-dropdown a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        /* Light hover effect */
+    }
+
+    /* Animation for Dropdown */
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .welcome-text-box {
+        width: 100%;
+        height: 310px;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h1 {
+        color: white;
+        text-align: center;
+        font-size: 26px;
+        font-family: "Rubik", sans-serif;
+        font-weight: 500;
+    }
+
+    .contact-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .call-me-box {
+        width: 50px;
+        height: 50px;
+        background-color: #0059FF;
+        border-radius: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .information-main-box{
+        width: 100%;
+        height: fit-content;
+        
+        margin-top: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        background-color: white;
+    }
+    .information-text-box{
+
+        width: 100%;
+        height: 200px;
+        background-color: black;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .overons-text{
+        color: white;
+        font-size: 30px;
+    }
+    .big-text-info-box{
+        width: 100%;
+        padding-top: 70px;
+        height: fit-content;
+        gap: 20px;
+        padding-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .Autobedrijf-text{
+        text-align: left;
+        color: black;
+        font-weight: bold;
+        width: 90%;
+        margin: 0;
+        font-size: 34px;
+    }
+    .img-rood-auto{
+        background-size: contain;
+        width: 100%;
+        top: 150px;
+        position: absolute;
+    }
+    h2{
+        color: black;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20px;
+        width: 90%;
+    }
+
+
+    .footer-main-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 50px;
+        flex-direction: column;
+        width: 100%;
+        z-index: 1;
+        height: fit-content;
+        gap: 10px;
+        background-color: white;
+    }
+
+    .contact-box {
+        width: 300px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+
+    .contact-h1 {
+        color: black;
+        margin: 0;
+    }
+
+    .contact-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .call-me-box {
+        width: 50px;
+        height: 50px;
+        background-color: #0059FF;
+        border-radius: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    a {
+        font-size: 13px;
+        font-weight: normal;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+
+    .locatie-box {
+        width: 300px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .locatie-box-name {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+    }
+
+    .location-down-box {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .location-info-h1 {
+        color: black;
+        margin: 0;
+        font-size: 13px;
+        text-align: left;
+        font-weight: normal;
+    }
+
+    .google-maps-box {
+        width: 300px;
+        height: 300px;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0px 2px 27.5px rgba(0, 0, 0, 0.05);
+    }
+
+    .google-maps-main {
+        width: 300px;
+        height: 300px;
+    }
+
+    .openingstijden-box {
+        width: 300px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        justify-content: center;
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .location-info-h2 {
+        font-size: 13px;
+        color: black;
+        font-weight: bolder;
+
+    }
+
+    .locatie-btn {
+        background: #0059FF;
+        border-radius: 10px;
+        border: none;
+        width: 150px;
+        color: white;
+        height: 40px;
+        font-size: 15px;
+        font-family: "Rubik", sans-serif;
+        font-weight: 500;
+    }
+
+
+}
